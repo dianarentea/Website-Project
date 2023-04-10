@@ -1,0 +1,52 @@
+.background{
+    background-image: url(..\\/images/background.jpg);
+    height: 722px;
+} 
+.title
+{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color:white;
+    text-align: center;
+    position: relative;
+    top:30%;
+    line-height: 12px;
+}
+hr{
+    width:700px;
+}
+#one
+{
+    font-family: 'Helvetica';
+    color:white;
+    font-size: 25px;
+}
+#two
+{
+    font-family: 'Helvetica';
+    color:white;
+    font-size: 45px;
+    font-weight: bold;
+}
+#three
+{
+    font-family: 'Helvetica';
+    color:white;
+    font-size: 20px;
+}
+.buttonExplore{
+    background-color: aliceblue;
+    font-size: 20px;
+    padding: 4px 15px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    top:50%;
+    color: #a17abe;
+    font-family: 'Helvetica';
+    transition-duration: 0.4s;
+}
+.buttonExplore:hover {
+    background-color: #e0d2eb;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
