@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {CitiesComponent} from '../app/cities/cities.component';
+import {TravelServicesComponent} from './travel-services/travel-services.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { CitiesComponent } from './cities/cities.component';
 
 const routes: Routes = [
 {
@@ -10,12 +11,16 @@ const routes: Routes = [
 },
 {
   path:'cities', 
+  component: TravelServicesComponent
+},
+{
+  path:'cities/cards',
   component: CitiesComponent
 },
   {
     path:'**',
     component:HomePageComponent
-  }
+  },
 ];
 
 @NgModule({

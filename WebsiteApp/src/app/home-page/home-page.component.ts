@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CitiesComponent } from '../cities/cities.component';
+import { TravelServicesComponent } from '../travel-services/travel-services.component';
 
 @Component({
   selector: 'app-home-page',
