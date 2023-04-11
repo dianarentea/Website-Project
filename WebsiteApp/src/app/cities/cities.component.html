@@ -1,6 +1,8 @@
-<button mat-raised-button color="primary" [routerLink]="''">Go back</button>
+<h1>MOST POPULAR</h1>
+<hr>
 <div class="game-list-container">
     <ng-container *ngFor="let thisCard of arrayOfCard; let index=index">
         <app-city-card [card]="thisCard"></app-city-card>
     </ng-container>
 </div>
+<button mat-raised-button color="primary" [routerLink]="''">Go back</button>
