@@ -1,1 +1,8 @@
-<p>city-card works!</p>
+<div class="card-container">
+    <img [src]="card.image" alt="image" />
+    <div class="title-flex">
+      <h3>{{ card.title }}</h3>
+    </div>
+    <p>{{ card.description }}</p>
+    <button class="button" [routerLink]="''">Visit now</button>
+</div>

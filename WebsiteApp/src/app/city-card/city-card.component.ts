@@ -8,7 +8,7 @@ import { CardService } from '../services/card.service';
   styleUrls: ['./city-card.component.scss']
 })
 export class CityCardComponent implements OnInit{
-@Input() cityCard!:cityCard;
+@Input() card!:cityCard;
 @Input() showView=true;
 @Output() cardEmitter:EventEmitter<cityCard>=new EventEmitter<cityCard>();
 

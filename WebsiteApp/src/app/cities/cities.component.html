@@ -1,2 +1,6 @@
-<p>cities works!</p>
 <button mat-raised-button color="primary" [routerLink]="''">Go back</button>
+<div class="game-list-container">
+    <ng-container *ngFor="let thisCard of arrayOfCard; let index=index">
+        <app-city-card [card]="thisCard"></app-city-card>
+    </ng-container>
+</div>
