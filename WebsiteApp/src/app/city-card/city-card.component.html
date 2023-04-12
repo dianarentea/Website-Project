@@ -1,9 +1,9 @@
 <div class="card-container">
     <img [src]="card.image" alt="image" />
     <div class="title-flex">
-      <h3>{{ card.title }}</h3>
+      <h3 #title>{{card.title}} </h3>
     </div>
-    <p>{{ card.description }}</p>
+    <!-- <p>{{ card.description }}</p> -->
     <div class="btn-toolbar">
     <button class="button" (click)="onVisitNowButtonClicked()">Visit now</button>
     <button class="button" (click)="navigateToCityPage()">See more</button>

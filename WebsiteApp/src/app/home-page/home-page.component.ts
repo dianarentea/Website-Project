@@ -12,6 +12,7 @@ homePageTitle:string='NEW ADVENTURE';
 
 updateHomePageTitle(title:string)
 {
+console.warn(title);
 this.homePageTitle=title;
 }
 }

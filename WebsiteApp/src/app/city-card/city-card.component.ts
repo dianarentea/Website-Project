@@ -13,7 +13,9 @@ export class CityCardComponent implements OnInit{
 @Input() card!:cityCard;
 @Output() titleSelected:EventEmitter<string>=new EventEmitter<string>();
 
-constructor(private router:Router, private cardService:CardService){}
+constructor(private router:Router, private cardService:CardService){
+  
+};
 
 ngOnInit(): void {}
 
@@ -26,6 +28,8 @@ navigateToCityPage()
 onVisitNowButtonClicked()
 {
   this.titleSelected.emit(this.card.title);
+  console.log("Pressed button");
+  console.log(this.card.title);
   this.router.navigateByUrl('');
 }
 
