@@ -1,17 +1,20 @@
 <button mat-raised-button color="primary" [routerLink]="''">Go home</button>
-
+<button class="right-button" mat-raised-button color="primary" [routerLink]="'\cards'">Go and see more</button>
 <p id="one">Search & Book all our destination</p>
 <div class="search-bar">
-    <form #searchForm="ngForm"> 
-        <input type="text" name="cityPlaceHolder" >
-        <button type="submit">Search</button>
-    </form>
-    <!-- <app-city-card *ngIf="searchResult"></app-city-card> -->
+    <input type="text" [(ngModel)]="searchName" placeholder="Select your city">
+    <button class="button"(click)="clearSearch()">Clear</button>
 </div>
+
+<div class="game-list-container">
+  <ng-container *ngFor="let thisCard of arrayOfCards">
+    <app-city-card [card]="thisCard" *ngIf="thisCard.title === searchName"></app-city-card>
+  </ng-container>
+</div>
+
 
 <p id="two">OUR SERVICES</p>
 <hr><br><br>
-<button mat-raised-button color="primary" [routerLink]="'\cards'">Go and see more</button>
 <div class="container">
 
 <h1>Travel

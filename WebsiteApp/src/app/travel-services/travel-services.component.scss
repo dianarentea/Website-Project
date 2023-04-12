@@ -44,7 +44,7 @@ hr{
 .search-bar
 {
     width: 100%;
-    max-width: 500px;
+    max-width: 350px;
     margin: 0 auto;
     background: rgb(243, 238, 238);
     display: flex;
@@ -59,4 +59,24 @@ hr{
     padding: 14px 15px;
     font-size: 15px;
     color:rgb(53, 54, 55)
+}
+.button{
+    background-color: rgb(228, 226, 229);
+    font-size: 15px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    border-color: #a385c1;
+    color:rgb(132, 30, 180);
+    font-family: 'Helvetica';
+    transition-duration: 0.4s;
+    position: relative;
+}
+.buttonExplore:hover {
+    background-color: #c1b8c7;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+.right-button{
+    position: fixed;
+  top: 10px;
+  right: 10px;
 }

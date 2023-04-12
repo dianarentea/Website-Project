@@ -1,8 +1,10 @@
+<div class="header-container">
 <h1>MOST POPULAR</h1>
+<button class="right-button"mat-raised-button color="primary" (click)="goBack()">Go back</button>
+</div>
 <hr>
 <div class="game-list-container">
     <ng-container *ngFor="let thisCard of arrayOfCards; let index=index">
         <app-city-card [card]="thisCard"></app-city-card>
     </ng-container>
 </div>
-<button mat-raised-button color="primary" (click)="goBack()">Go back</button>

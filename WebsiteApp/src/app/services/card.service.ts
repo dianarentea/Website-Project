@@ -34,7 +34,7 @@ export class CardService{
          description:'Ljubljana is the green capital of a green country. The area on either side of the river with its picturesque bridges and the central market owes its distinctive appearance to the great architect Jože Plečnik. The city of thousands of events is surrounded by parks and are.'
         },
         {
-         title: 'Budapesta',
+         title: 'Budapest',
          image:'assets/images/budapesta.jpg',
          description:'The capital of Hungary is situated along the Danube, in the heart of the Carpathian basin. Hilly Buda, which comprises one-third of the city’s area of 525 km² is located along the right bank of the Danube surrounded by low mountains. The geology of Budapest has played a determining role in the city’s life over the course of history. Hot springs breaking through limestone mountains supplying water of 35-76 degrees centigrade gave rise to a flourishing culture of spas in the Roman Age and made Budapest one of the most popular spa cities of Europe. '
         },
