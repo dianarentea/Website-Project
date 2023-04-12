@@ -1,5 +1,5 @@
 .card-container {
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 6px;
     max-width: 300px;
     padding: 1rem;
@@ -15,17 +15,25 @@
     text-align: justify;
     width:300px
   }
+  p{
+    color:rgb(66, 60, 60);
+    font-size: 18px;
+  }
+  .button
+  {
+    background-color: rgb(158, 86, 193);
+    font-size: 15px;
+    padding: 2px 10px;
+    border-radius: 5px;
+    border-color: #8567a3;
+    color: #ececec;
+    font-family: 'Helvetica';
+    transition-duration: 0.4s;
+    position: relative;
+    top:50%;
+    margin-left: 45px;
+  }
+  .button:hover,a:hover{
+    opacity: 0.7;
+  }
 }  
-.button
-{
-  background-color: rgb(158, 86, 193);
-  font-size: 15px;
-  padding: 2px 10px;
-  border-radius: 5px;
-  border-color: #8567a3;
-  color: #ececec;
-  font-family: 'Helvetica';
-  transition-duration: 0.4s;
-  position: relative;
-  top:50%
-}

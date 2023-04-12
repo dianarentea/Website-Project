@@ -2,9 +2,11 @@
 
 <p id="one">Search & Book all our destination</p>
 <div class="search-bar">
-    <form action=""> 
-        <input type="text" placeholder="Select your city" name="cityPlaceHolder">
+    <form #searchForm="ngForm"> 
+        <input type="text" name="cityPlaceHolder" >
+        <button type="submit">Search</button>
     </form>
+    <!-- <app-city-card *ngIf="searchResult"></app-city-card> -->
 </div>
 
 <p id="two">OUR SERVICES</p>
