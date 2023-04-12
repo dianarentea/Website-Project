@@ -8,10 +8,9 @@ import { HomePageComponent } from './home-page/home-page.component';
 
 import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CityCardComponent } from './city-card/city-card.component';
 import { CitiesComponent } from './cities/cities.component';
+import { CityPageComponent } from './city-page/city-page.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +18,14 @@ import { CitiesComponent } from './cities/cities.component';
     TravelServicesComponent,
     HomePageComponent,
     CityCardComponent,
-    CitiesComponent
+    CitiesComponent,
+    CityPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
     FormsModule,
-    //ng-zorro
     ],
   bootstrap: [AppComponent]
 })

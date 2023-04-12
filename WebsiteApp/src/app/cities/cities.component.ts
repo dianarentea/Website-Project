@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { cityCard } from '../models/cityCard.model';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-cities',
@@ -8,6 +9,12 @@ import { cityCard } from '../models/cityCard.model';
 })
 export class CitiesComponent implements OnInit {
 
+  constructor(private location:Location) {}
+
+  goBack()
+  {
+    this.location.back();
+  }
   arrayOfCard: cityCard[]=[
    {
     title: 'Paris',

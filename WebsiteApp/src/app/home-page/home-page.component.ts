@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TravelServicesComponent } from '../travel-services/travel-services.component';
+import { cityCard } from '../models/cityCard.model';
 
 @Component({
   selector: 'app-home-page',
@@ -8,4 +8,10 @@ import { TravelServicesComponent } from '../travel-services/travel-services.comp
 })
 export class HomePageComponent {
 
+homePageTitle:string='NEW ADVENTURE';
+
+updateHomePageTitle(title:string)
+{
+this.homePageTitle=title;
+}
 }
