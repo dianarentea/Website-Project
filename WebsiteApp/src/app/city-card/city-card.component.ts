@@ -8,23 +8,23 @@ import { CardService } from '../services/card.service';
   styleUrls: ['./city-card.component.scss']
 })
 export class CityCardComponent {
+  location: any;
 
   constructor(private cardService: CardService) {
   };
 
   @Input() card: cityCard;
+  @Output() titleEmitterCityCard: EventEmitter<string>=new EventEmitter<string>();
 
+  sendTitleToHomePage()
+  {
+    this.titleEmitterCityCard.emit(this.card.title);
+  }
   navigateToCityPage() {
     this.cardService.saveCardToService(this.card);
   }
 
-  sendTitleToService(): void
-  {
-    this.cardService.setCardTitle(this.card.title);
-  }
-
   ngOnInit(): void {
-    this.sendTitleToService();
   }
 
 }

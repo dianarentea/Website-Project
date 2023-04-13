@@ -6,8 +6,6 @@ import { cityCard } from '../models/cityCard.model';
 export class CardService {
     private _savedCard!: cityCard;
 
-    private cityTitle: string = '';
-
     cardSubject = new Subject<cityCard>();
     cardSubject$ = this.cardSubject.asObservable();
     private arrayOfCards: cityCard[] = [
@@ -54,14 +52,6 @@ export class CardService {
     }
     get savedCard() {
         return this._savedCard;
-    }
-
-    setCardTitle(newTitle: string){
-        this.cityTitle = newTitle;
-    }
-
-    getCardTitle() {
-        return this.cityTitle;
     }
 
 }

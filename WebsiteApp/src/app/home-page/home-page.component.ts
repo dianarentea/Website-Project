@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CardService } from '../services/card.service';
 
 @Component({
@@ -8,18 +8,27 @@ import { CardService } from '../services/card.service';
 })
 export class HomePageComponent {
 
+  @ViewChild('discoverElement') discoverElement: ElementRef;
+
   homePageTitle: string;
 
   constructor(private cardService:CardService){
   };
-  
+
   ngOnInit(): void{
-    
-    this.homePageTitle = this.cardService.getCardTitle();
-    if(this.homePageTitle=='')
-   {
     this.homePageTitle='NEW ADVENTURE';
-   }
   }
 
+  setTitleOnHomePage($event){
+    this.homePageTitle=$event;
+  }
+
+  setTitle(newTitle: string) {
+    this.homePageTitle = newTitle;
+    this.scrollToDiscoverElement();
+  }
+
+  scrollToDiscoverElement() {
+    this.discoverElement.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
 }

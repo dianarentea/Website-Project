@@ -1,11 +1,11 @@
 <div class="card-container">
-    <img [src]="card.image" alt="image" />
+    <img [src]="card?.image" alt="image" />
     <div class="title-flex">
-      <h3> {{card.title}} </h3>
+      <h3> {{card?.title}} </h3>
     </div>
-    <!-- <p>{{ card.description }}</p> -->
+
     <div class="btn-toolbar">
-    <button class="button" (click)="sendTitleToService()" [routerLink]="''">Visit now</button>
+    <button class="button" (click)="sendTitleToHomePage()" [routerLink]="''">Visit now</button>
     <button class="button" (click)="navigateToCityPage()" [routerLink]="'/city-page'">See more</button>
     </div>
 </div>

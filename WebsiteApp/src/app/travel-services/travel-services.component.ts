@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { cityCard } from '../models/cityCard.model';
 import { CardService } from '../services/card.service';
 
@@ -9,6 +9,12 @@ import { CardService } from '../services/card.service';
 })
 export class TravelServicesComponent {
   arrayOfCards: cityCard[] = [];
+
+  @Output() titleEmitter = new EventEmitter<string>();
+
+  receiveTitleFromCityCard(title: string) {
+    this.titleEmitter.emit(title);
+  }
 
   constructor( private cardService:CardService) {}
 

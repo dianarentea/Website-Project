@@ -1,10 +1,9 @@
 <div class="header-container">
-<h1>MOST POPULAR</h1>
-<button class="right-button"mat-raised-button color="primary" (click)="goBack()">Go back</button>
+    <h1>MOST POPULAR</h1>
 </div>
 <hr>
 <div class="game-list-container">
     <ng-container *ngFor="let thisCard of arrayOfCards; let index=index">
-        <app-city-card [card]="thisCard"></app-city-card>
+        <app-city-card [card]="thisCard" (titleEmitterCityCard)="receiveTitleFromCityCard($event)"></app-city-card>
     </ng-container>
 </div>
