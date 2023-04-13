@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { cityCard } from '../models/cityCard.model';
+import { CardService } from '../services/card.service';
 
 @Component({
   selector: 'app-home-page',
@@ -8,11 +8,18 @@ import { cityCard } from '../models/cityCard.model';
 })
 export class HomePageComponent {
 
-homePageTitle:string='NEW ADVENTURE';
+  homePageTitle: string;
 
-updateHomePageTitle(title:string)
-{
-console.warn(title);
-this.homePageTitle=title;
-}
+  constructor(private cardService:CardService){
+  };
+  
+  ngOnInit(): void{
+    
+    this.homePageTitle = this.cardService.getCardTitle();
+    if(this.homePageTitle=='')
+   {
+    this.homePageTitle='NEW ADVENTURE';
+   }
+  }
+
 }

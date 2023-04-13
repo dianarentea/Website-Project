@@ -1,5 +1,4 @@
-import { Component,EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { cityCard } from '../models/cityCard.model';
 import { CardService } from '../services/card.service';
 
@@ -8,29 +7,24 @@ import { CardService } from '../services/card.service';
   templateUrl: './city-card.component.html',
   styleUrls: ['./city-card.component.scss']
 })
-export class CityCardComponent implements OnInit{
+export class CityCardComponent {
 
-@Input() card!:cityCard;
-@Output() titleSelected:EventEmitter<string>=new EventEmitter<string>();
+  constructor(private cardService: CardService) {
+  };
 
-constructor(private router:Router, private cardService:CardService){
-  
-};
+  @Input() card: cityCard;
 
-ngOnInit(): void {}
+  navigateToCityPage() {
+    this.cardService.saveCardToService(this.card);
+  }
 
-navigateToCityPage()
-{
-  this.cardService.saveCardToService(this.card);
-  this.router.navigateByUrl('/city-page');
-}
+  sendTitleToService(): void
+  {
+    this.cardService.setCardTitle(this.card.title);
+  }
 
-onVisitNowButtonClicked()
-{
-  this.titleSelected.emit(this.card.title);
-  console.log("Pressed button");
-  console.log(this.card.title);
-  this.router.navigateByUrl('');
-}
+  ngOnInit(): void {
+    this.sendTitleToService();
+  }
 
 }
